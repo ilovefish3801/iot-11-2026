@@ -1,5 +1,8 @@
+"""Lab 5: a tree of folders and files with a longest-path search"""
+
+
 class File:
-    """A class that represents a file with a name, an extension and a size in KB"""
+    """Represents a file with a name, an extension and a size in KB"""
 
     def __init__(self,
                  name: str = "",
@@ -11,6 +14,7 @@ class File:
 
     @property
     def full_name(self) -> str:
+        """Return the file name with its extension"""
         return f"{self.name}.{self.extension}"
 
     def __str__(self):
@@ -18,7 +22,7 @@ class File:
 
 
 class Folder:
-    """A class that represents a folder that can contain files and other folders"""
+    """Represents a folder that can contain files and other folders"""
 
     def __init__(self,
                  name: str = "folder"):
